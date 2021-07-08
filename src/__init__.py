@@ -3,7 +3,12 @@ import daemon.pidfile
 import inotify.adapters
 import logging
 import subprocess
+import signal
 import sys
+
+
+def _shutdown(signum, frame):
+    sys.exit(0)
 
 
 class CsgoHandler():
@@ -95,7 +100,10 @@ class CsgoHandler():
     def daemonize(self):
         print("Starting daemon...")
         with daemon.DaemonContext(
-            stdout=sys.stdout,
-            pidfile=daemon.pidlockfile.PIDLockFile("/tmp/csgo_handler.pid"),
+            stdout = sys.stdout,
+            pidfile = daemon.pidlockfile.PIDLockFile("/tmp/csgo-handler.pid"),
+            signal_map = {
+                signal.SIGTERM: _shutdown,
+            },
         ):
             self.eventloop()

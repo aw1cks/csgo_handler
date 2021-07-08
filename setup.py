@@ -11,7 +11,7 @@ setup(
     platforms = [
         "linux",
     ],
-    version = "1.0.1",
+    version = "1.1.0",
     license = "AGPLv3",
     description = "Daemon to run a program when CS:GO starts and stops",
     long_description = long_description,
@@ -21,7 +21,7 @@ setup(
     url = "https://gitlab.com/aw1cks/csgo_handler",
     download_url = "https://gitlab.com/aw1cks/csgo_handler",
     scripts = [
-        "bin/csgo_handler",
+        "bin/csgo-handler",
     ],
     keywords = [
         "csgo",

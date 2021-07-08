@@ -1,4 +1,5 @@
 import daemon
+import daemon.pidfile
 import inotify.adapters
 import logging
 import subprocess
@@ -95,5 +96,6 @@ class CsgoHandler():
         print("Starting daemon...")
         with daemon.DaemonContext(
             stdout=sys.stdout,
+            pidfile=daemon.pidlockfile.PIDLockFile("/tmp/csgo_handler.pid"),
         ):
             self.eventloop()

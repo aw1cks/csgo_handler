@@ -2,8 +2,10 @@
 Description=Run script when CS:GO opens or closes
 
 [Service]
+Type=forking
+PIDFile=/tmp/csgo_handler.pid
 ExecStart=/usr/bin/csgo_handler -D
-KillMode=process
+ExecStop=/bin/kill -s QUIT $MAINPID
 
 [Install]
 WantedBy=default.target

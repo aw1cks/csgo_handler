@@ -12,9 +12,9 @@ pypi:
       TWINE_PASSWORD="${CI_JOB_TOKEN}"
       TWINE_USERNAME='gitlab-ci-token'
       TWINE_REPOSITORY_URL="${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi"
-      twine upload --verbose dist/* systemd/csgo_handler.unit
+      twine upload --verbose dist/*
     # Upload to PyPi
     - >-
       TWINE_PASSWORD="${PYPI_TOKEN}"
       TWINE_USERNAME='__token__'
-      twine upload --verbose dist/* systemd/csgo_handler.unit
+      twine upload --verbose dist/*

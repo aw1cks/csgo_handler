@@ -1,0 +1,4 @@
+configize>=1.0.1
+python-daemon>=2.3.0
+pyyaml>=5.3
+inotify>=0.2.10

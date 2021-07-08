@@ -1,0 +1,9 @@
+[Unit]
+Description=Run script when CS:GO opens or closes
+
+[Service]
+ExecStart=/usr/bin/csgo_handler -D
+KillMode=process
+
+[Install]
+WantedBy=default.target

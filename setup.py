@@ -11,7 +11,7 @@ setup(
     platforms = [
         "linux",
     ],
-    version = "1.1.0",
+    version = "1.1.1",
     license = "AGPLv3",
     description = "Daemon to run a program when CS:GO starts and stops",
     long_description = long_description,

@@ -101,7 +101,7 @@ class CsgoHandler():
         print("Starting daemon...")
         with daemon.DaemonContext(
             stdout = sys.stdout,
-            pidfile = daemon.pidlockfile.PIDLockFile("/tmp/csgo-handler.pid"),
+            pidfile = daemon.pidfile.PIDLockFile("/tmp/csgo-handler.pid"),
             signal_map = {
                 signal.SIGTERM: _shutdown,
             },

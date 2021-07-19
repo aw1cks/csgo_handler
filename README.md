@@ -45,6 +45,6 @@ The following parameters are present:
 
 | Argument        | Short argument | Explanation                                | Default | Example                                  |
 |-----------------|----------------|--------------------------------------------|---------|------------------------------------------|
-| `--config`      | `-c`           | Override config path                       | `None`  | `csgo_handler -c /etc/csgo_handler.yaml` |
-| `--config_path` | `-C`           | Search for config files within this folder | `None`  | `csgo_handler -C /etc/csgo_handler`      |
-| `--daemon`      | `-D`           | Run as a daemon                            | `False` | `csgo_handler -D`                        |
+| `--config`      | `-c`           | Override config path                       | `None`  | `csgo-handler -c /etc/csgo_handler.yaml` |
+| `--config_path` | `-C`           | Search for config files within this folder | `None`  | `csgo-handler -C /etc/csgo_handler`      |
+| `--daemon`      | `-D`           | Run as a daemon                            | `False` | `csgo-handler -D`                        |

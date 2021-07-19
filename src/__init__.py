@@ -66,7 +66,12 @@ class CsgoHandler():
     def game_opened_handler(self):
         self.logger.debug("CSGO started")
 
-        pipe = subprocess.Popen(self.start_script, start_new_session=True)
+        pipe = subprocess.Popen(
+            self.start_script,
+            stdout=subprocess.PIPE,
+            bufsize=1,
+            start_new_session=True,
+        )
         pipe.communicate()
 
         if pipe.returncode != 0:
@@ -75,7 +80,12 @@ class CsgoHandler():
     def game_closed_handler(self):
         self.logger.debug("CSGO stopped")
 
-        pipe = subprocess.Popen(self.stop_script, start_new_session=True)
+        pipe = subprocess.Popen(
+            self.stop_script,
+            stdout=subprocess.PIPE,
+            bufsize=1,
+            start_new_session=True,
+        )
         pipe.communicate()
 
         if pipe.returncode != 0:
